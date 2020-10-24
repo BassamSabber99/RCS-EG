@@ -1,0 +1,61 @@
+﻿@model IEnumerable<RCS.Models.Announcement>
+@{
+    ViewBag.Title = "Announcements";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="announcement container" style="min-height:800px;margin-top:10%;">
+    <h2 class="wow bounceIn pb-1 border-bottom font-weight-bold">My Annoucements</h2>
+
+    @if (!Model.Any())
+    {
+        <p>No Announce Yet !!</p>
+    }
+    else
+    {
+        <div id="accordion" class="mb-5">
+            @foreach (var announce in Model.Select((value, index) => new { value, index }))
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            @{
+                                var c = announce.index;
+                                c += 1;
+                            }
+                            <button class="btn btn-link col-md-12 text-left font-weight-bold" style="outline:none;text-decoration:none;" data-toggle="collapse" data-target="#collapse_@c" aria-expanded="true" aria-controls="collapse_@c">
+                                @announce.value.announceTitle
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapse_@c" class="collapse show" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <h5>Product Name : @announce.value.advertiseName </h5>
+                                    @if (announce.value.dateAdded != null)
+                                    {
+                                        <h5>Date Added : @string.Format("{0:dd-MM-yyyy}", Convert.ToDateTime(announce.value.dateAdded)) </h5>
+                                    }
+
+                                    <p>@announce.value.description <a href="/Advertises/myAdvertises" class="btn btn-danger">Show My Advertises</a></p>
+                                </div>
+                                <div class="col-md-3">@announce.value.Date</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+
+@section scripts{
+    <script>
+            new WOW().init();
+            $(document).ready(function() {
+                $("nav .navbar-collapse ul li a:eq(3)").css("color", "#ff4301")
+            })
+    </script>
+}

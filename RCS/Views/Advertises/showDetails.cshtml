@@ -1,0 +1,198 @@
+﻿@using Microsoft.AspNet.Identity;
+@model RCS.viewModels.detailsViewModel
+@{
+    ViewBag.Title = "Show Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="details">
+
+    <div class="container col-md-10  col-sm-12" style="margin-top: 150px;">
+        <div class="row mt-4 ">
+            <!-- Swiper -->
+            <div class="swiper-container col-md-3 col-sm-12 wow bounceInUp ">
+                <div class="swiper-wrapper">
+                    @foreach (var image in Model.imagePath)
+                    {
+                        <div class="swiper-slide col-md-12">
+                            <img src="/uploadedFiles/@image" class="img-fluid h-100" />
+                        </div>
+                    }
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="ItemDetail col-md-6 col-sm-11 mx-auto border p-4 wow pulse">
+                <h4>@Model.productname</h4>
+                <p>@Model.price EGP</p>
+                <p>@Model.address</p>
+                <span class="badge badge-primary p-2">@Model.depName</span>
+                <span class="badge badge-info p-2">@Model.catName</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container description col-md-10 col-sm-12 border p-4 wow fadeIn">
+        <h2>Description</h2>
+        <p>@Model.description</p>
+    </div>
+
+    @if (User.IsInRole("Admin") && Model.state == false)
+    {
+        <div class="container col-md-10 col-sm-12  p-4 wow fadeIn">
+            <a href="~/Control/Reject/@Model.id" class="float-right btn btn-danger">Rejected</a>
+            <a href="~/Control/Accepted/@Model.id" class="float-right btn btn-primary mr-2">Accepted</a>
+        </div>
+    }
+
+
+    <!--Section: Contact v.2-->
+    <section class="mb-4 container border p-4 mt-4 wow bounceInUp">
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-md-9 mb-md-0 mb-5">
+                <form id="contact-form">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-md-12 mb-2">
+                            <div class="md-form">
+                                <label for="message">Your message:</label>
+                                <textarea type="text" id="message" name="message" rows="8" class="form-control md-textarea"></textarea>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-primary ml-4" value="Send" id="send">
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-md-3 text-center">
+                <ul class="list-unstyled mb-0 mt-5">
+
+                    <li>
+                        <h6 class="border p-3">@Model.owner.UserName</h6>
+                    </li>
+
+                    <li>
+                        <button type="button" class="popover-dismiss btn btn-primary p-2 mb-1" data-toggle="popover" title="Owner Phone" data-content="@Model.owner.PhoneNumber"><i class="fas fa-phone  fa-2x"></i></button>
+                    </li>
+
+                    <li>
+                        <button type="button" class="popover-dismiss btn btn-primary p-2" data-toggle="popover" title="Owner Email" data-content="@Model.owner.Email"><i class="fas fa-envelope  fa-2x"></i></button>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+        </div>
+    </section>
+    <!--Section: Contact v.2-->
+
+    <section id="AllMessages" class="mb-4 container p-4 mt-4 wow bounceInUp">
+        <h4>Messages:</h4>
+
+    </section>
+</div>
+
+
+@section scripts{
+    
+    @Scripts.Render("~/bundles/jqueryval")
+<script>
+        new WOW().init();
+
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'flip',
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+            },
+            lazy: {
+                loadPrevNext: true,
+            },
+        });
+       window.onload = function () {
+           $.ajax({
+                   url: `/api/Message?productid=${@Model.id}`,
+                   method: "GET",
+                    success: function (data) {
+                        console.log(data);
+                        for (let i = 0; i < data.length; i++) {
+                            var type ="";
+                            if (data[i].sender.UserName == "@Model.owner.UserName") {
+                                type = "(Owner)";
+                            }
+                            var date = new Date();
+                            var st = data[i].sent_date;
+                            var pattern = /(\d{2})\.(\d{2})\.(\d{4})/;
+                            var dt = new Date(st.replace(pattern, '$3-$2-$1'));
+                            date = dt;
+                            var elem = `<div class="message border p-4">
+                                        <div class="row">
+                                            <div class="col-md-6"><h5 class="text-info">${data[i].sender.UserName} ${type}</h5></div>
+                                            <div class="col-md-6"><h6 class="text-right" style="color:#808080"><i class="fas fa-clock"></i> ${date.toString().substr(0,25)}</h6></div>
+                                        </div>
+                                        <p class="text-left">${data[i].content}</p>
+                                    </div>`;
+                            $("#AllMessages").append(elem);
+                        }
+                   }
+               });
+       };
+       $("#send").on("click", function (e) {
+           e.preventDefault();
+           if ($("#message").val() == "") {
+               bootbox.alert("Please Enter Message To Send.");
+           }
+           else {
+               var message = $("#message").val();
+               var msgDto = {};
+               msgDto.productid = @Model.id;
+               msgDto.senderid = "@User.Identity.GetUserId()";
+               msgDto.content = message;
+               $.ajax({
+                   url: `/api/Message`,
+                   method: "POST",
+                   data: msgDto,
+                   success: function (data) {
+                       var type ="";
+                       if (data.sender.UserName == "@Model.owner.UserName") {
+                           type = "(Owner)";
+                       }
+                       var date = new Date();
+                       var st = data.sent_date;
+                       var pattern = /(\d{2})\.(\d{2})\.(\d{4})/;
+                       var dt = new Date(st.replace(pattern, '$3-$2-$1'));
+                       date = dt;
+                       var elem = `<div class="message border p-4">
+                                    <div class="row">
+                                        <div class="col-md-6"><h5 class="text-info">${data.sender.UserName} ${type}</h5></div>
+                                        <div class="col-md-6"><h6 class="text-right" style="color:#808080"><i class="fas fa-clock"></i> ${date.toString().substr(0,25)}</h6></div>
+                                    </div>
+                                    <p class="text-left">${data.content}</p>
+                                </div>`;
+                       $("#AllMessages").append(elem);
+                   }
+               });
+
+           }
+       });
+
+</script>
+    
+    
+}
+

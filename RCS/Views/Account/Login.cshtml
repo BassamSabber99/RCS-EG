@@ -1,0 +1,65 @@
+﻿@using RCS.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+<div class="login-container wow pulse">
+    <div class="container col-md-5 p-5 login">
+        <div class="img-container">
+            <img src="~/images/icon.png">
+        </div>
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <h1 class="text-center mb-5 text-white">Sign In</h1>
+            <div class="form-group row">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label text-white" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group row">
+                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label text-white" })
+                <div class="col-md-10">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-offset-2 col-md-10">
+                    <div class="checkbox">
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                        @Html.LabelFor(m => m.RememberMe , new { @class = "text-white" })
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Log in" class="btn btn-primary" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+    new WOW().init();
+    $(document).ready(function () {
+        $("nav .navbar-collapse ul li a:eq(3)").css("color", "#ff4301")
+        $("body").css({
+            "background-image": "url('../images/login-back.jpg')",
+            "background-position": "top center",
+            "background-size": "cover",
+            "background-repeat": "no-repeat",
+
+        })
+    })
+    </script>
+}

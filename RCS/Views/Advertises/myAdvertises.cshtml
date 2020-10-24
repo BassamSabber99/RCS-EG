@@ -1,0 +1,149 @@
+﻿@using Microsoft.AspNet.Identity;
+@{
+    ViewBag.Title = "My Advertitses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="myprod container" style="min-height:800px">
+    <h2 class="wow bounceIn pb-1 border-bottom font-weight-bold">My Advertises</h2>
+
+
+    <table id="myProducts" class="table" >
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Department</th>
+                <th scope="col">Category</th>
+                <th scope="col">Status</th>
+                <th scope="col">Date Added</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+@section scripts{
+    <script>
+            new WOW().init();
+            $(document).ready(function() {
+                $("nav .navbar-collapse ul li a:eq(2)").css("color", "#ff4301");
+
+               var table = $("#myProducts").DataTable({
+                    ajax:{
+                        url: "/api/Product?id=@User.Identity.GetUserId()",
+                        dataSrc:""
+                    },
+                    columns:[
+                        {
+                            "data": "name",
+                            "render": function (data, type, product) {
+                                if (product.status == true) {
+                                    return `<a href="/Advertises/showDetails?id=${product.id}" >${data}</a>`;
+                                }
+                                return data;
+                               
+                            }
+                            
+                        },
+                        {
+                            "data": "price",
+                            "render": function (data) {
+                                return `${data} EGP`;
+                            }
+                        },
+                        {
+                            "data": "Category.Department.depName",
+                        },
+                        {
+                            "data": "Category.catName",
+                        },
+                        {
+                            "data": "status",
+                            "render": function (data) {
+                                if (data == true) {
+                                    return `<span class="badge badge-danger p-2">Published</span>`
+                                }
+                                return `<span class="badge badge-primary p-2">Pending....</span>`
+                            }
+                        },
+                        {
+                            "data": "DateAdded",
+                            "render": function (data) {
+                                if (data == null) {
+                                    return "Not Added Yet !";
+                                }
+                                return data.substr(0, 10);
+                            }
+                        },
+                        {
+                            "data": "id",
+                            "render": function (data, type, product) {
+                                var date = new Date(); 
+                                if (product.DateAdded != null) {
+                                    var st = product.DateAdded;
+                                    var pattern = /(\d{2})\.(\d{2})\.(\d{4})/;
+
+                                    var dt = new Date(st.replace(pattern, '$3-$2-$1'));
+                                    date = dt
+                                }
+                               var datenow = new Date();
+                               if (product.DateAdded != null && datenow.getFullYear() == date.getFullYear() && datenow.getMonth() > date.getMonth() && Math.abs(datenow.getDate() - date.getDate()) <= 7) {
+                                    return `<a href="/Advertises/Edit/${data}"  class="btn btn-info mr-2">Renew</a><button class="btn btn-danger js-delete" data-id=${data} >DELETE</button>`;
+                                }
+                                return `<a href="/Advertises/Edit/${data}"  class="btn btn-info mr-2">EDIT</a><button class="btn btn-danger js-delete" data-id=${data} >DELETE</button>`;
+                            }
+                        },
+                         
+                    ],
+                   
+                });
+                
+                $("#myProducts").on("click", ".js-delete", function () {
+                 
+                    var button = $(this);
+                    bootbox.confirm("Are you sure you want delete this Product ?", function (result) {
+                        if (result) {
+                            $.ajax({
+                                url: "/api/Product?id=" + button.attr("data-id"),
+                                method: "DELETE",
+                                success: function () {
+                                    table.row(button.parents("tr")).remove().draw();
+                                    toastr.success("Advertise Deleted !!");
+                                },
+                                error: function (err) {
+                                    console.log(err);
+                                    toastr.error("Something wrong happend !!");
+                                }
+                            });
+                        }
+                    });
+
+                });
+                       
+                    
+
+            });
+    </script>
+}
+
+
+
+
+

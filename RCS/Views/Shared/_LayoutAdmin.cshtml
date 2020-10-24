@@ -1,0 +1,72 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The RCS Group is a global online marketplace in which we provide all the services of cafes and restaurants. You can offer the restaurant or café for sale if desired.
+    Also, through the platform, you can buy and sell all the supplies for the café or restaurant, such as refrigerators, ovens, espresso machines, and others ..">
+    <meta name="keywords" content="art branding,art media,art media,art design,art franchise,RCS,rcs,Resturant and cafe services , kitchen machnie
+     , resturant machines , coffe shop machines , jobs , staff , chefs, services, interior design , exterior design , devices ">
+    <meta name="author" content="Ahmed Saber">
+    <meta name="copyright" content="Art Media All rights reserved">
+    <title>@ViewBag.Title | Resturant and Cafe Service</title>
+    <link rel="icon" href="~/images/icon.png">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/Content/styleadmin.css" />
+</head>
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="border-right bg-warning text-white" id="sidebar-wrapper">
+            <div class="sidebar-heading">
+                <div class="container">
+                    <img src="~/images/logoAdmin.png" class="ml-3" width="100">
+                </div>
+                <p class="text-center text-dark"><span class="text-danger">R</span>esturant and <span class="text-danger">C</span>afe <span class="text-danger">S</span>ervice</p>
+            </div>
+
+            <div class="list-group list-group-flush">
+                <a href="/Control/index" class="list-group-item list-group-item-action">All Requests</a>
+                <a href="/Control/allClients" class="list-group-item list-group-item-action">All Clients</a>
+            </div>
+            <div class="btn-group col-md-4" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()"><i class="fas fa-sign-out-alt"></i>Log Out</a>
+                    }
+                </div>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-light bg-light border-bottom">
+                <button class="btn btn-outline-warning" id="menu-toggle"><i class="fas fa-bars"></i></button>
+            </nav>
+
+            @RenderBody()
+
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+
+
+
+
+
+    @Scripts.Render("~/bundles/lib")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/mainAdmin.js"></script>
+</body>
+</html>

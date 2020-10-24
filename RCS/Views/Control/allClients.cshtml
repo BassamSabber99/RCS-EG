@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "allClients";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div id="client"  class="container" style="margin: 14% 10%;">
+    <h2 class="container" style="color:#4a3f35">All Clients</h2>
+    <hr>
+    <table id="allClients" class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Products</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
+    <div id="userProductContainer" class="mt-5"></div>
+</div>
+
+
+
+@section scripts{
+    
+    <script>
+        $(document).ready(function () {
+            $("#allClients").on("click", ".show", function () {
+                $.ajax({
+                    url: `/api/Product?id=${$(this).attr("data-id")}`,
+                    success: function (data) {
+                        console.log(data);
+                        $("#userProductContainer").empty();
+                        var tables = `
+                                    <h2 class="container" style="color:#4a3f35">Products</h2>
+                                    <hr>
+                                    <table id="userProduct" class="table">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th scope="col">Owner Name</th>
+                                                <th scope="col">Item Name</th>
+                                                <th scope="col">Category</th>
+                                                <th scope="col">Date Added</th>
+                                                <th scope="col">Status</th>
+                                                <th scope="col">Details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                        </tbody>
+                                    </table>`;
+                        $("#userProductContainer").append(tables);
+                        var row;
+                        for (let i = 0; i < data.length; i++) {
+                            var val;
+                            if (data[i].status == true) {
+                                val = `<span class="badge badge-danger p-2">Published</span>`;
+                            }
+                            else {
+                                val = `<span class="badge badge-primary p-2">Pendeing</span>`;
+                            }
+                            if (data[i].DateAdded == null) {
+                                date = "Not Added Yet !";
+                            }
+                            else {
+                                date = data[i].DateAdded.substr(0, 10);
+                            }
+                            
+                             row = `<tr>
+                                        <td>${data[i].owner.UserName}</td>
+                                        <td>${data[i].name}</td>
+                                        <td>${data[i].Category.catName}</td>
+                                        <td>${date}</td>
+                                        <td>${val}</td>
+                                        <td><a href="/Advertises/showDetails/${data[i].id}" class="btn btn-outline-danger"> Show Details </a></td>
+                                    </tr>`;
+                            $("#userProductContainer #userProduct tbody").append(row);
+                        }
+
+                        $("#userProduct").DataTable();
+                     
+                    }
+                });
+            });
+            $("#allClients").DataTable({
+                ajax: {
+                    url: "/api/User",
+                    dataSrc: "",
+                },
+                columns: [
+                    {
+                        data: "userName",
+                    },
+                    {
+                        data: "PhoneNumber",
+                    },
+                    {
+                        data: "address",
+                    },
+                    {
+                        data: "Email",
+                    },
+                    {
+                        data: "count",
+                        render: function (data, type, user) {
+                            return `<button class="show btn btn-warning" data-id=${user.id} >show(${data})</button>`;
+                        }
+                    }
+                ],
+            });
+            $('#sidebar-wrapper .list-group a:eq(1)').css('backgroundColor', '#ff4301');
+
+        });
+    </script>    
+    
+}

@@ -1,0 +1,174 @@
+﻿@using Microsoft.AspNet.Identity;
+@model IEnumerable<RCS.viewModels.allProduct>
+@{
+    ViewBag.Title = "Advertises";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="category container">
+    <h2 class="wow bounceIn pb-1 border-bottom font-weight-bold">All Advertises</h2>
+    @if(Request.IsAuthenticated && !User.IsInRole("Admin")){
+        <div class="row justify-content-center">
+            <a href="~/Advertises/makeAdvertise" class="btn btn-primary wow tada">+ Make Advertise</a>
+        </div>
+    }
+    <div class="row" align="center">
+        <form class="ml-4 col-md-12">
+            <div class="form-group row col-md-12">
+                <label for="Search" class="col-sm-1 col-form-label col-form-label-lg wow fadeIn">Search:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control col-md-12 form-control-lg wow fadeIn" id="Search" placeholder="Advertise Name">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="filter" class="row justify-content-center p-2 wow fadeIn" align="center">
+        <button class="dep btn btn-outline-danger mr-1 mt-1 active" data-dep="All">All</button>
+        <div class="dropdown">
+            <button class="dep btn btn-outline-danger dropdown-toggle mr-1 mt-1" data-dep="Buy / Sell" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Buy / Sell
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item cat" data-CateName="Equipment">Equipment</a>
+                <a class="dropdown-item cat" data-CateName="Basis">Basis</a>
+                <a class="dropdown-item cat" data-CateName="Devices">Devices</a>
+                <a class="dropdown-item cat" data-CateName="Shops">Shops</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dep btn btn-outline-danger dropdown-toggle mr-1 mt-1" data-dep="Services" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Services
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item cat" data-CateName="Interior Design">Interior Design</a>
+                <a class="dropdown-item cat" data-CateName="Exterior Design">Exterior Design</a>
+                <a class="dropdown-item cat" data-CateName="Design and Print Menus">Design and Print Menus</a>
+                <a class="dropdown-item cat" data-CateName="Franchise Guide">Franchise Guide</a>
+                <a class="dropdown-item cat" data-CateName="Create Brandings">Create Brandings</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dep btn btn-outline-danger dropdown-toggle mr-1 mt-1" data-dep="Jobs" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Jobs
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item cat" data-CateName="Stewarts">Stewarts</a>
+                <a class="dropdown-item cat" data-CateName="Chiefs">Chiefs</a>
+                <a class="dropdown-item cat" data-CateName="Delivery">Delivery</a>
+                <a class="dropdown-item cat" data-CateName="Cleaners">Cleaners</a>
+                <a class="dropdown-item cat" data-CateName="Accountants">Accountants</a>
+                <a class="dropdown-item cat" data-CateName="Managers">Managers</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dep btn btn-outline-danger dropdown-toggle mr-1 mt-1" data-dep=" News / Events" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                News / Events
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item cat" data-CateName="Local">Local</a>
+                <a class="dropdown-item cat" data-CateName="Global">Global</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="products mb-4 mt-4 justify-content-center">
+    <div class="row item justify-content-center ">
+            @if (!Model.Any())
+            {
+                <h3 style="height:500px">No Advertises Found !!</h3>
+            }
+            else
+            {
+                foreach (var product in Model)
+                {
+                    <div class="p-2  wow bounceInUp" style="height:400px" data-CateName="@product.catName">
+                        <img src="~/uploadedFiles/@product.imagePath">
+                        <h6 class="p-1 mt-2">@product.name <span class="font-weight-bold float-right" style="font-size: 12px; line-height: 25px;">@product.price EGP</span></h6>
+                        <span class="badge badge-primary p-1 " style="margin-top:8px">@product.depName</span>
+                        <span class="badge badge-info p-1 ">@product.catName</span>
+                        <a href="/Advertises/showDetails?id=@product.id" class="btn btn-danger float-right" role="button">Show Details</a>
+                    </div>
+                }
+            }
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        new WOW().init();
+        $(document).ready(function () {
+            $("nav .navbar-collapse ul li a:eq(1)").css("color", "#ff4301");
+            $("#filter .dep").on("click", function () {
+                var val = $(this).attr("data-dep");
+                if (val == "All") {
+                    $("#filter .dep").removeClass("active");
+                    $("#filter .cat").removeClass("active");
+                    $(this).toggleClass("active");
+                    $.ajax({
+                        url: `/api/department/GetDepPro?depName=${val}`,
+                        method: "GET",
+                        beforeSend: function () {
+                            $(".products .item").empty();
+                        },
+                        success: function (data) {
+                            $(".products .item").empty();
+                            if (data.length == 0) {
+                                $(".products .item").append(`<h3 style="height: 500px">No Advertises Found !!</h3>`);
+                            }
+                            for (let i = 0; i < data.length; i++) {
+                                var imageName = data[i].image.split("\\");
+                                var elem = ` 
+                                    <div class="p-2  " style="height:400px" data-CateName="${data[i].cat}">
+                                        <img src="../uploadedFiles/${imageName[imageName.length - 1]}">
+                                        <h6 class="p-1 mt-2"> ${data[i].nam} <span class="font-weight-bold float-right" style="font-size: 12px; line-height: 25px;">${data[i].price} EGP</span></h6>
+                                        <span class="badge badge-primary p-1 " style="margin-top:8px">${data[i].dep}</span>
+                                        <span class="badge badge-info p-1 ">${data[i].cat}</span>
+                                        <a href="/Advertises/showDetails?id=${data[i].id}" class="btn btn-danger float-right" role="button">Show Details</a>
+                                    </div>`;
+
+                                $(".products .item").append(elem);
+                            }
+                        }
+                    });
+                }
+              
+                $("#filter .cat").on("click", function () {
+                    $("#filter .dep").removeClass("active");
+                    $(this).parent().prev().toggleClass("active");
+                    $("#filter .cat").removeClass("active");
+                    $(this).toggleClass("active");
+                    let val = $(this).attr("data-CateName");
+                    $.ajax({
+                        url: `/api/department/GetCatPro?catName=${val}`,
+                        method: "GET",
+                        beforeSend: function () {
+                            $(".products .item").empty();
+                        },
+                        success: function (data) {
+                            $(".products .item").empty();
+                            if (data.length == 0) {
+                                $(".products .item").append(`<h3 style="height: 500px">No Advertises Found !!</h3>`);
+                            }
+                            for (let i = 0; i < data.length; i++) {
+                                var imageName = data[i].image.split("\\");
+                                var elem = ` 
+                                    <div class="p-2  " style="height:400px" data-CateName="${data[i].cat}">
+                                        <img src="../uploadedFiles/${imageName[imageName.length - 1]}">
+                                        <h6 class="p-1 mt-2"> ${data[i].nam} <span class="font-weight-bold float-right" style="font-size: 12px; line-height: 25px;">${data[i].price} EGP</span></h6>
+                                        <span class="badge badge-primary p-1 " style="margin-top:8px">${data[i].dep}</span>
+                                        <span class="badge badge-info p-1 ">${data[i].cat}</span>
+                                        <a href="/Advertises/showDetails?id=${data[i].id}" class="btn btn-danger float-right" role="button">Show Details</a>
+                                    </div>`;
+
+                                $(".products .item").append(elem);
+                            }
+                        }
+                    });
+
+                });
+            });
+        });
+    </script>       
+}
+

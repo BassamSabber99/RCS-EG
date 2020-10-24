@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Requests";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container" style="margin: 14% 10%;">
+    <h2 class="container text-dark">All Requests</h2>
+    <hr>
+    <table id="Requests" class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Owner Name</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
+</div>
+<!-- /#page-content-wrapper -->
+
+@section scripts{
+   
+    <script>
+        $(document).ready(function () {
+            $("#Requests").DataTable({
+                ajax: {
+                    url: "/api/Product",
+                    dataSrc:""
+                },
+                columns: [
+                    {
+                        data:"owner.UserName",
+                    },
+                    {
+                        data:"name",
+                    },
+                    {
+                        data:"Category.catName",
+                    },
+                    {
+                        data: "id",
+                        render: function (data) {
+                            return `<a href="/Advertises/showDetails/${data}" class="btn btn-outline-danger"> Show Details </a>`;
+                        }
+                    }
+                ],
+            });
+            $('#sidebar-wrapper .list-group a:eq(0)').css('backgroundColor', '#ff4301');
+        });
+            
+    </script>
+   
+}

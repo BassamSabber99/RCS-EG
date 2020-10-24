@@ -1,0 +1,56 @@
+﻿@using RCS.Models;
+@using Microsoft.AspNet.Identity
+@using System.Data.Entity;
+@if (Request.IsAuthenticated)
+{
+
+
+    var _context = new ApplicationDbContext();
+    var user = User.Identity.GetUserId();
+    var numOfannounce = _context.Announcements.Where(x => x.seen == false && x.OwnerId == user).ToList().Count;
+
+    if (!User.IsInRole("Admin"))
+    {
+        <li class="nav-item ">
+            <a class="nav-link " href="/Advertises/myAdvertises">My Advertises</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link " href="/Home/Announcements">Annoucements <span class="badge badge-danger">@numOfannounce</span></a>
+        </li>
+    }
+
+
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+
+        <li class="nav-item dropdown">
+            <a class=" btn btn-secondry nav-link dropdown-toggle text-left bg-white text-danger" style="text-decoration:none;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user"></i> <!--Hello,@User.Identity.GetUserName()-->
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <span class="text-center" style="font-size:15px;margin-left:10%">Hello,@User.Identity.GetUserName()</span>
+
+                <hr />
+                @if (!User.IsInRole("Admin"))
+                {
+                    <a class="nav-link ml-4" href="/Home/myProfile">My Profile</a>
+                }
+                else
+                {
+                    <a class="nav-link ml-4" href="/Advertises/index">Advertises</a>
+                }
+
+                <a class="nav-link ml-4" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+            </div>
+        </li>
+    }
+}
+else
+{
+
+    <li class="nav-item ">@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "nav-link" })</li>
+    <li class="nav-item">@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "nav-link" })</li>
+}
+
