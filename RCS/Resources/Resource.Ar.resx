@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="abContent" xml:space="preserve">
+    <value>متوفر الآن على المنصة للإعلان عن جميع الخدمات التي يقدمها (إعلان مباشر للترويج لمطعم أو مقهى - بيع مطعم أو مقهى - إعلان عن وظيفة) مجانًا لفترة محدودة للغاية سيتم الإعلان عن أسعار الإعلانات على الموقع في وقت لاحق.</value>
+  </data>
+  <data name="AboutUs" xml:space="preserve">
+    <value>حول</value>
+  </data>
+  <data name="Accountants" xml:space="preserve">
+    <value>محاسبين</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>اجراء</value>
+  </data>
+  <data name="address" xml:space="preserve">
+    <value>العنوان : 22 ش منشية الطيران - الخليفة المامون - م الجديدة </value>
+  </data>
+  <data name="Advertises" xml:space="preserve">
+    <value>الاعلانات</value>
+  </data>
+  <data name="advName" xml:space="preserve">
+    <value>اسم الاعلان</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>الكل</value>
+  </data>
+  <data name="AllAdvertises" xml:space="preserve">
+    <value>ألاعلانات</value>
+  </data>
+  <data name="Annoucements" xml:space="preserve">
+    <value>الاشعارات</value>
+  </data>
+  <data name="Basis" xml:space="preserve">
+    <value>اساس</value>
+  </data>
+  <data name="BuySell" xml:space="preserve">
+    <value>بيع / شراء</value>
+  </data>
+  <data name="CafeProcessing" xml:space="preserve">
+    <value>تجهيز الكافيهات</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>فئة</value>
+  </data>
+  <data name="Chiefs" xml:space="preserve">
+    <value>شيفات</value>
+  </data>
+  <data name="Cleaners" xml:space="preserve">
+    <value>عمال نظافة</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>تواصل معنا</value>
+  </data>
+  <data name="content1" xml:space="preserve">
+    <value>منصة إلكترونية تخدم كل من يعمل في مجال المقاهي والمطاعم وصناعة الأغذية والمشروبات بشكل عام سواء كنت صاحب مشروع أو تستعد لفتح مشروع جديد أو حتى تبحث عن وظيفة جديدة في مجال متعلق ب صناعة الأغذية والمشروبات ، كل هذا وأكثر متاح </value>
+  </data>
+  <data name="content2" xml:space="preserve">
+    <value>ما يميزنا هو أننا أول من اكتشف منصة متخصصة في تقديم الطعام والمقاهي لتوفير الوقت للبائع والمشتري. انضم إلى منصات واستفد من خدمات الموقع الممتازة. اعرض خدماتك
+         التي تحتاجها أو الحاجة التي تبيعها أو توفرها</value>
+  </data>
+  <data name="content3" xml:space="preserve">
+    <value>قم بإنشاء إعلانك الخاص لفترة محدودة على المنصة قم بإنشاء عدد غير محدود من إعلاناتك على المنصة ، كل هذا وأكثر ، بامتيازات ترويجية تفوق الخيال.</value>
+  </data>
+  <data name="CreateBrandings" xml:space="preserve">
+    <value>انشاء براند</value>
+  </data>
+  <data name="creativity" xml:space="preserve">
+    <value>الابداع</value>
+  </data>
+  <data name="DateAdded" xml:space="preserve">
+    <value>تاريخ الاضاقة</value>
+  </data>
+  <data name="DELETE" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Delivery" xml:space="preserve">
+    <value>دليفرى</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>قسم </value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="DesignandPrintMenus" xml:space="preserve">
+    <value>تصميم و طباعه قوائم الطعام</value>
+  </data>
+  <data name="Devices" xml:space="preserve">
+    <value>اجهزة</value>
+  </data>
+  <data name="dir" xml:space="preserve">
+    <value>rtl</value>
+  </data>
+  <data name="EDIT" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="EGP" xml:space="preserve">
+    <value>جنيه</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value> artmedia2017.eg@gmail.com :البريد الالكتروني</value>
+  </data>
+  <data name="Equipment" xml:space="preserve">
+    <value>معدات</value>
+  </data>
+  <data name="ExteriorDesign" xml:space="preserve">
+    <value>تصميم خارجي</value>
+  </data>
+  <data name="FranchiseGuide" xml:space="preserve">
+    <value>مرشد فرنشايز</value>
+  </data>
+  <data name="Global" xml:space="preserve">
+    <value>عالمي</value>
+  </data>
+  <data name="go" xml:space="preserve">
+    <value>اذهب</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="individ" xml:space="preserve">
+    <value>التميز</value>
+  </data>
+  <data name="InteriorDesign" xml:space="preserve">
+    <value>تصميم داخلي</value>
+  </data>
+  <data name="Jobs" xml:space="preserve">
+    <value>وظائف</value>
+  </data>
+  <data name="lnd" xml:space="preserve">
+    <value>التليفون الارضي : (+20) 26905208</value>
+  </data>
+  <data name="Local" xml:space="preserve">
+    <value>محلى</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="Logoff" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="MakeAdvertise" xml:space="preserve">
+    <value>انشاء اعلان + </value>
+  </data>
+  <data name="MakeAnAdvertise" xml:space="preserve">
+    <value> انشأ أعلانك </value>
+  </data>
+  <data name="Managers" xml:space="preserve">
+    <value>مديرين</value>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>الرسائل :</value>
+  </data>
+  <data name="mob" xml:space="preserve">
+    <value>الموبايل : (+20)1020689999  / 1028666161</value>
+  </data>
+  <data name="MyAdvertises" xml:space="preserve">
+    <value>اعلاناتي</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>الصفحة الشخصية</value>
+  </data>
+  <data name="NewsEvents" xml:space="preserve">
+    <value>الاحداث و الاخبار</value>
+  </data>
+  <data name="note" xml:space="preserve">
+    <value>تم حذف الاعلان !!!!</value>
+  </data>
+  <data name="OwnerEmail" xml:space="preserve">
+    <value>البريد الالكتروني</value>
+  </data>
+  <data name="OwnerPhone" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>معلق......</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>السعر</value>
+  </data>
+  <data name="prompt" xml:space="preserve">
+    <value>هل انت متأكد من انك تريد حذف هذا الاعلان ؟</value>
+  </data>
+  <data name="Published" xml:space="preserve">
+    <value>منشور</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>انشاء حساب</value>
+  </data>
+  <data name="Renew" xml:space="preserve">
+    <value>تجديد</value>
+  </data>
+  <data name="RestaurantsProcessing" xml:space="preserve">
+    <value>تجهيز المطاعم</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>بحث:</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>خدمات</value>
+  </data>
+  <data name="Shops" xml:space="preserve">
+    <value>محلات</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="special" xml:space="preserve">
+    <value>التخصص</value>
+  </data>
+  <data name="SpecialWork" xml:space="preserve">
+    <value>عمل متميز</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="Stewarts" xml:space="preserve">
+    <value>ستيوارت</value>
+  </data>
+  <data name="text" xml:space="preserve">
+    <value>text-right</value>
+  </data>
+  <data name="whCon" xml:space="preserve">
+    <value>نحن نساعدك في الترويج للمطعم أو المقهى محليًا وعالميًا ، لذلك ستكون هنا في أيدي كل من تبحث عنه ، سواء عملاء محتملين أو أصحاب مشاريع أو باحثين عن عمل.</value>
+  </data>
+  <data name="WhoWeAre" xml:space="preserve">
+    <value>من نحن ؟</value>
+  </data>
+  <data name="Yourmessage" xml:space="preserve">
+    <value>رسالتك :</value>
+  </data>
+</root>

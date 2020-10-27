@@ -6,6 +6,10 @@ using System.Web.Mvc;
 using System.Data.Entity;
 using RCS.Models;
 using Microsoft.AspNet.Identity;
+using System.Threading;
+using System.Globalization;
+using RCS.Filters;
+
 
 namespace RCS.Controllers
 {
@@ -19,6 +23,17 @@ namespace RCS.Controllers
         protected override void Dispose(bool disposing)
         {
             _contex.Dispose();
+        }
+        public ActionResult change(string Lang)
+        {
+            if (Lang != null) {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(Lang);
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(Lang);
+            }
+            HttpCookie cookie = new HttpCookie("Language");
+            cookie.Value = Lang;
+            Response.Cookies.Add(cookie);
+            return Redirect("index");
         }
         public ActionResult Index()
         {

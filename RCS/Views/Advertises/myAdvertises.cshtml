@@ -6,19 +6,19 @@
 
 
 <div class="myprod container" style="min-height:800px">
-    <h2 class="wow bounceIn pb-1 border-bottom font-weight-bold">My Advertises</h2>
+    <h2 class="wow bounceIn pb-4 border-bottom font-weight-bold @RCS.Resources.Resource.text">@RCS.Resources.Resource.MyAdvertises</h2>
 
 
-    <table id="myProducts" class="table" >
+    <table id="myProducts" class="table @RCS.Resources.Resource.text" >
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Department</th>
-                <th scope="col">Category</th>
-                <th scope="col">Status</th>
-                <th scope="col">Date Added</th>
-                <th scope="col">Actions</th>
+                <th scope="col">@RCS.Resources.Resource.advName</th>
+                <th scope="col">@RCS.Resources.Resource.Price</th>
+                <th scope="col">@RCS.Resources.Resource.Department</th>
+                <th scope="col">@RCS.Resources.Resource.Category</th>
+                <th scope="col">@RCS.Resources.Resource.Status</th>
+                <th scope="col">@RCS.Resources.Resource.DateAdded</th>
+                <th scope="col">@RCS.Resources.Resource.Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -65,7 +65,7 @@
                         {
                             "data": "price",
                             "render": function (data) {
-                                return `${data} EGP`;
+                                return `${data} @RCS.Resources.Resource.EGP`;
                             }
                         },
                         {
@@ -78,9 +78,9 @@
                             "data": "status",
                             "render": function (data) {
                                 if (data == true) {
-                                    return `<span class="badge badge-danger p-2">Published</span>`
+                                    return `<span class="badge badge-danger p-2">@RCS.Resources.Resource.Published</span>`
                                 }
-                                return `<span class="badge badge-primary p-2">Pending....</span>`
+                                return `<span class="badge badge-primary p-2">@RCS.Resources.Resource.Pending</span>`
                             }
                         },
                         {
@@ -105,9 +105,9 @@
                                 }
                                var datenow = new Date();
                                if (product.DateAdded != null && datenow.getFullYear() == date.getFullYear() && datenow.getMonth() > date.getMonth() && Math.abs(datenow.getDate() - date.getDate()) <= 7) {
-                                    return `<a href="/Advertises/Edit/${data}"  class="btn btn-info mr-2">Renew</a><button class="btn btn-danger js-delete" data-id=${data} >DELETE</button>`;
+                                    return `<a href="/Advertises/Edit/${data}"  class="btn btn-info mr-2">@RCS.Resources.Resource.Renew</a><button class="btn btn-danger js-delete" data-id=${data} >@RCS.Resources.Resource.DELETE</button>`;
                                 }
-                                return `<a href="/Advertises/Edit/${data}"  class="btn btn-info mr-2">EDIT</a><button class="btn btn-danger js-delete" data-id=${data} >DELETE</button>`;
+                                return `<a href="/Advertises/Edit/${data}"  class="btn btn-info mr-2">@RCS.Resources.Resource.EDIT</a><button class="btn btn-danger js-delete" data-id=${data} >@RCS.Resources.Resource.DELETE</button>`;
                             }
                         },
                          
@@ -118,14 +118,14 @@
                 $("#myProducts").on("click", ".js-delete", function () {
                  
                     var button = $(this);
-                    bootbox.confirm("Are you sure you want delete this Product ?", function (result) {
+                    bootbox.confirm("@RCS.Resources.Resource.prompt", function (result) {
                         if (result) {
                             $.ajax({
                                 url: "/api/Product?id=" + button.attr("data-id"),
                                 method: "DELETE",
                                 success: function () {
                                     table.row(button.parents("tr")).remove().draw();
-                                    toastr.success("Advertise Deleted !!");
+                                    toastr.success("@RCS.Resources.Resource.note");
                                 },
                                 error: function (err) {
                                     console.log(err);

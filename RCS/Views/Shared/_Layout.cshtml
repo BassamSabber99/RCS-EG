@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html dir="@RCS.Resources.Resource.dir">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,14 @@
     <link rel="icon" href="~/images/icon.png">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @if (HttpContext.Current.Request.Cookies.Count > 0)
+    {
+        if (HttpContext.Current.Request.Cookies["Language"].Value == "ar")
+        {
+            <link rel="stylesheet" href="~/Content/styleAr.css" />
+        }
+    }
+
 </head>
 <body style="padding:0;margin:0;box-sizing:border-box;">
     

@@ -161,6 +161,7 @@ C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\roslyn\VBCSCompiler.exe.conf
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\RCS.dll.config
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\RCS.dll
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\RCS.pdb
+C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Ar\RCS.resources.dll
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Antlr3.Runtime.dll
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\EntityFramework.dll
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\EntityFramework.SqlServer.dll
@@ -187,6 +188,8 @@ C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Microsoft.Owin.Security.Twit
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Newtonsoft.Json.dll
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Owin.dll
+C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\PagedList.dll
+C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\PagedList.Mvc.dll
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\System.Net.Http.Formatting.dll
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\System.Web.Helpers.dll
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\System.Web.Http.dll
@@ -204,6 +207,8 @@ C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Microsoft.AI.Web.xml
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Microsoft.ApplicationInsights.xml
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\PagedList.xml
+C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\PagedList.Mvc.xml
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\System.Net.Http.Formatting.xml
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\System.Web.Http.xml
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\System.Web.Http.WebHost.xml
@@ -230,7 +235,6 @@ C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Microsoft.Owin.Security.OAut
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.csprojAssemblyReference.cache
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.Migrations.initialmigration.resources
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.Migrations.createTables.resources
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.Migrations.addColumnInProduct.resources
@@ -251,8 +255,11 @@ C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.Migrations.delmess
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.Migrations.addcolownerid.resources
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.Migrations.updatecolproductid.resources
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.Migrations.addcolinadv.resources
+C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.Resources.Resource.resources
+C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.Resources.Resource.Ar.resources
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.csproj.GenerateResource.cache
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.csproj.CoreCompileInputs.cache
+C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\Ar\RCS.resources.dll
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.csproj.CopyComplete
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.dll
 C:\Users\WebDeveloper\Desktop\RCS-Eg-master\RCS\obj\Debug\RCS.pdb

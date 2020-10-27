@@ -12,10 +12,10 @@
     if (!User.IsInRole("Admin"))
     {
         <li class="nav-item ">
-            <a class="nav-link " href="/Advertises/myAdvertises">My Advertises</a>
+            <a class="nav-link " href="/Advertises/myAdvertises">@RCS.Resources.Resource.MyAdvertises</a>
         </li>
         <li class="nav-item ">
-            <a class="nav-link " href="/Home/Announcements">Annoucements <span class="badge badge-danger">@numOfannounce</span></a>
+            <a class="nav-link " href="/Home/Announcements">@RCS.Resources.Resource.Annoucements <span class="badge badge-danger">@numOfannounce</span></a>
         </li>
     }
 
@@ -35,22 +35,22 @@
                 <hr />
                 @if (!User.IsInRole("Admin"))
                 {
-                    <a class="nav-link ml-4" href="/Home/myProfile">My Profile</a>
+                    <a class="nav-link ml-4" href="/Home/myProfile">@RCS.Resources.Resource.MyProfile</a>
                 }
                 else
                 {
-                    <a class="nav-link ml-4" href="/Advertises/index">Advertises</a>
+                    <a class="nav-link ml-4" href="/Advertises/index">@RCS.Resources.Resource.Advertises</a>
                 }
 
-                <a class="nav-link ml-4" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                <a class="nav-link ml-4" href="javascript:document.getElementById('logoutForm').submit()">@RCS.Resources.Resource.Logoff</a>
             </div>
         </li>
     }
 }
 else
 {
-
-    <li class="nav-item ">@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "nav-link" })</li>
-    <li class="nav-item">@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "nav-link" })</li>
+    <li class="nav-item ">@Html.ActionLink(RCS.Resources.Resource.Register, "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "nav-link" })</li>
+    <li class="nav-item">@Html.ActionLink(@RCS.Resources.Resource.Login, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "nav-link" })</li>
 }
+
 

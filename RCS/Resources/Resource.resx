@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="abContent" xml:space="preserve">
+    <value>It is now available on the RCS platform to advertise all the services it provides (direct advertisement to promote a restaurant or cafe - sale of the restaurant or café - job advertisement) for free for a very limited period Advertising prices will be announced on the site later.</value>
+  </data>
+  <data name="AboutUs" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="Accountants" xml:space="preserve">
+    <value>Accountants</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="address" xml:space="preserve">
+    <value>Address: 22 Manchiet el tairan st.khalifa el maamoun . heliopolis</value>
+  </data>
+  <data name="Advertises" xml:space="preserve">
+    <value>Advertises</value>
+  </data>
+  <data name="advName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="AllAdvertises" xml:space="preserve">
+    <value>All Advertises</value>
+  </data>
+  <data name="Annoucements" xml:space="preserve">
+    <value>Annoucements</value>
+  </data>
+  <data name="Basis" xml:space="preserve">
+    <value>Basis</value>
+  </data>
+  <data name="BuySell" xml:space="preserve">
+    <value>Buy / Sell</value>
+  </data>
+  <data name="CafeProcessing" xml:space="preserve">
+    <value>Cafe Processing</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Chiefs" xml:space="preserve">
+    <value>Chiefs</value>
+  </data>
+  <data name="Cleaners" xml:space="preserve">
+    <value>Cleaners</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="content1" xml:space="preserve">
+    <value>An electronic platform that serves everyone who works in the field of cafes, restaurants and the food and beverage industry in general, whether you are a project owner or preparing to open a new project or even looking for a new job in a field related to the food and beverage industry, all this and more are available to us at RCS</value>
+  </data>
+  <data name="content2" xml:space="preserve">
+    <value>What is unique about us is that we are the first to find a platform specialized in serving restaurants and cafes in order to save time for the seller and buyer Join our RCS platforms and benefit from the excellent site services. Offer your services
+        that you need or the need that you sell or provide</value>
+  </data>
+  <data name="content3" xml:space="preserve">
+    <value>Create your own ad for a limited time on the RCS platform. Create an unlimited number of your ads on the platform, all this and more, with promotional privileges beyond imagination.</value>
+  </data>
+  <data name="CreateBrandings" xml:space="preserve">
+    <value>Create Brandings</value>
+  </data>
+  <data name="creativity" xml:space="preserve">
+    <value>Creativity</value>
+  </data>
+  <data name="DateAdded" xml:space="preserve">
+    <value>Date Added</value>
+  </data>
+  <data name="DELETE" xml:space="preserve">
+    <value>DELETE</value>
+  </data>
+  <data name="Delivery" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DesignandPrintMenus" xml:space="preserve">
+    <value>Design and Print Menus</value>
+  </data>
+  <data name="Devices" xml:space="preserve">
+    <value>Devices</value>
+  </data>
+  <data name="dir" xml:space="preserve">
+    <value>ltr</value>
+  </data>
+  <data name="EDIT" xml:space="preserve">
+    <value>EDIT</value>
+  </data>
+  <data name="EGP" xml:space="preserve">
+    <value>EGP</value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Email: artmedia2017.eg@gmail.com</value>
+  </data>
+  <data name="Equipment" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="ExteriorDesign" xml:space="preserve">
+    <value>Exterior Design</value>
+  </data>
+  <data name="FranchiseGuide" xml:space="preserve">
+    <value>Franchise Guide</value>
+  </data>
+  <data name="Global" xml:space="preserve">
+    <value>Global</value>
+  </data>
+  <data name="go" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="individ" xml:space="preserve">
+    <value>Individuation</value>
+  </data>
+  <data name="InteriorDesign" xml:space="preserve">
+    <value>Interior Design</value>
+  </data>
+  <data name="Jobs" xml:space="preserve">
+    <value>Jobs</value>
+  </data>
+  <data name="lnd" xml:space="preserve">
+    <value>LandLine: (+20) 26905208</value>
+  </data>
+  <data name="Local" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Logoff" xml:space="preserve">
+    <value>Log off</value>
+  </data>
+  <data name="MakeAdvertise" xml:space="preserve">
+    <value>+ Make Advertise</value>
+  </data>
+  <data name="MakeAnAdvertise" xml:space="preserve">
+    <value>Make An Advertise</value>
+  </data>
+  <data name="Managers" xml:space="preserve">
+    <value>Managers</value>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>Messages :</value>
+  </data>
+  <data name="mob" xml:space="preserve">
+    <value>Mobile: (+20) 1020689999 /  1028666161</value>
+  </data>
+  <data name="MyAdvertises" xml:space="preserve">
+    <value>My Advertises</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="NewsEvents" xml:space="preserve">
+    <value>News / Events</value>
+  </data>
+  <data name="note" xml:space="preserve">
+    <value>Advertise Deleted !!</value>
+  </data>
+  <data name="OwnerEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="OwnerPhone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Pending....</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="prompt" xml:space="preserve">
+    <value>Are you sure you want delete this advertise ?</value>
+  </data>
+  <data name="Published" xml:space="preserve">
+    <value>Published</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Renew" xml:space="preserve">
+    <value>Renew</value>
+  </data>
+  <data name="RestaurantsProcessing" xml:space="preserve">
+    <value>Restaurants Processing</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search:</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Shops" xml:space="preserve">
+    <value>Shops</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>Show Details</value>
+  </data>
+  <data name="special" xml:space="preserve">
+    <value>Specializing</value>
+  </data>
+  <data name="SpecialWork" xml:space="preserve">
+    <value>Special Work</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Stewarts" xml:space="preserve">
+    <value>Stewarts</value>
+  </data>
+  <data name="text" xml:space="preserve">
+    <value>text-left</value>
+  </data>
+  <data name="whCon" xml:space="preserve">
+    <value>We help you in promoting the restaurant or café locally and internationally, So here you will be in the hands of all those you are looking for, whether potential clients, project owners or job seekers.</value>
+  </data>
+  <data name="WhoWeAre" xml:space="preserve">
+    <value>Who We Are ?</value>
+  </data>
+  <data name="Yourmessage" xml:space="preserve">
+    <value>Your message :</value>
+  </data>
+</root>

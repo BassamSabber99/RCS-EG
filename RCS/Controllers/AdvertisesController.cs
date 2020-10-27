@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity;
 using System.IO;
 using System.Configuration;
 using RCS.Filters;
+using PagedList;
 
 namespace RCS.Controllers
 {
@@ -26,9 +27,10 @@ namespace RCS.Controllers
         {
             _context.Dispose();
         }
+        
         [AllowAnonymous]
         // GET: Products
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
             var prod = new List<allProduct>();
             foreach(var pro in _context.Products.Include(s=>s.Category).Where(x=>x.status == true).ToList())
@@ -45,7 +47,8 @@ namespace RCS.Controllers
                 };
                 prod.Add(ins);
             };
-            return View(prod);
+            
+            return View(prod.ToPagedList(page ?? 1,12));
         }
         public ActionResult makeAdvertise()
         {
@@ -152,7 +155,7 @@ namespace RCS.Controllers
                 _context.SaveChanges();
             return RedirectToAction("myAdvertises");
         }
-        public ActionResult showDetails(int id)
+        public ActionResult showDetails(int? id)
         {
           
             try
