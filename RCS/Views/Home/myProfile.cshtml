@@ -6,26 +6,26 @@
 
 <div class="personal container" style="min-height:800px;margin-top:10%;">
     <div class="container border p-5">
-        <h5 class="text-info mb-2">Personal Information</h5>
+        <h5 class="text-info mb-2 @RCS.Resources.Resource.text">@RCS.Resources.Resource.PersonalInformation</h5>
         <hr />
-        <div class="row justify-content-between">
+        <div class="row justify-content-between @RCS.Resources.Resource.text">
             <div class="col-md-6">
-                <p><b>UserName :</b> <span>@Model.UserName</span></p>
+                <p><b>@RCS.Resources.Resource.UserName</b> <span>@Model.UserName</span></p>
             </div>
             <div class="col-md-6">
-                <p><b>Address :</b> <span>@Model.address</span></p>
+                <p><b>@RCS.Resources.Resource.addressText</b> <span>@Model.address</span></p>
             </div>
             <div class="col-md-6">
-                <p><b>Phone :</b> <span>@Model.PhoneNumber</span></p>
+                <p><b>@RCS.Resources.Resource.Phone</b> <span>@Model.PhoneNumber</span></p>
             </div>
             <div class="col-md-6">
-                <p><b>Email :</b> <span>@Model.Email</span></p>
+                <p><b>@RCS.Resources.Resource.EmailText</b> <span>@Model.Email</span></p>
             </div>
             <div class="col-md-6">
-                <p><b>Gender :</b> <span>@Model.gender</span></p>
+                <p><b>@RCS.Resources.Resource.Gender</b> <span>@Model.gender</span></p>
             </div>
             <div class="col-md-6">
-                <a href="/Manage/ChangePassword" class="btn btn-primary">Change Password</a>
+                <a href="/Manage/ChangePassword" class="btn btn-primary">@RCS.Resources.Resource.ChangePassword</a>
             </div>
 
 

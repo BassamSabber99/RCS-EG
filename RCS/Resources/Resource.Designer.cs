@@ -106,6 +106,15 @@ namespace RCS.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Address :.
+        /// </summary>
+        public static string addressText {
+            get {
+                return ResourceManager.GetString("addressText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Advertises.
         /// </summary>
         public static string Advertises {
@@ -187,6 +196,24 @@ namespace RCS.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Category.
+        /// </summary>
+        public static string CategoryName {
+            get {
+                return ResourceManager.GetString("CategoryName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Password .
+        /// </summary>
+        public static string ChangePassword {
+            get {
+                return ResourceManager.GetString("ChangePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Chiefs.
         /// </summary>
         public static string Chiefs {
@@ -201,6 +228,24 @@ namespace RCS.Resources {
         public static string Cleaners {
             get {
                 return ResourceManager.GetString("Cleaners", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm new password.
+        /// </summary>
+        public static string Confirmnewpassword {
+            get {
+                return ResourceManager.GetString("Confirmnewpassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm password.
+        /// </summary>
+        public static string Confirmpassword {
+            get {
+                return ResourceManager.GetString("Confirmpassword", resourceCulture);
             }
         }
         
@@ -260,6 +305,15 @@ namespace RCS.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Current password.
+        /// </summary>
+        public static string Currentpassword {
+            get {
+                return ResourceManager.GetString("Currentpassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Date Added.
         /// </summary>
         public static string DateAdded {
@@ -292,6 +346,15 @@ namespace RCS.Resources {
         public static string Department {
             get {
                 return ResourceManager.GetString("Department", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Department.
+        /// </summary>
+        public static string DepartmentName {
+            get {
+                return ResourceManager.GetString("DepartmentName", resourceCulture);
             }
         }
         
@@ -359,11 +422,92 @@ namespace RCS.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email :.
+        /// </summary>
+        public static string EmailText {
+            get {
+                return ResourceManager.GetString("EmailText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Equipment.
         /// </summary>
         public static string Equipment {
             get {
                 return ResourceManager.GetString("Equipment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This Field Required ..
+        /// </summary>
+        public static string error {
+            get {
+                return ResourceManager.GetString("error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Enter Address.
+        /// </summary>
+        public static string errorAddress {
+            get {
+                return ResourceManager.GetString("errorAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Enter Confrim Password.
+        /// </summary>
+        public static string errorConPass {
+            get {
+                return ResourceManager.GetString("errorConPass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Enter Email.
+        /// </summary>
+        public static string errorEmail {
+            get {
+                return ResourceManager.GetString("errorEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Enter Gender.
+        /// </summary>
+        public static string errorGender {
+            get {
+                return ResourceManager.GetString("errorGender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Enter Password.
+        /// </summary>
+        public static string errorPass {
+            get {
+                return ResourceManager.GetString("errorPass", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Enter Phone Number.
+        /// </summary>
+        public static string errorPhon {
+            get {
+                return ResourceManager.GetString("errorPhon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Enter UserName.
+        /// </summary>
+        public static string errorUserName {
+            get {
+                return ResourceManager.GetString("errorUserName", resourceCulture);
             }
         }
         
@@ -382,6 +526,15 @@ namespace RCS.Resources {
         public static string FranchiseGuide {
             get {
                 return ResourceManager.GetString("FranchiseGuide", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gender :.
+        /// </summary>
+        public static string Gender {
+            get {
+                return ResourceManager.GetString("Gender", resourceCulture);
             }
         }
         
@@ -409,6 +562,15 @@ namespace RCS.Resources {
         public static string Home {
             get {
                 return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to * Select All Images For This Item ..
+        /// </summary>
+        public static string imagesInq {
+            get {
+                return ResourceManager.GetString("imagesInq", resourceCulture);
             }
         }
         
@@ -494,6 +656,15 @@ namespace RCS.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Make Request.
+        /// </summary>
+        public static string MakeRequest {
+            get {
+                return ResourceManager.GetString("MakeRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Managers.
         /// </summary>
         public static string Managers {
@@ -530,6 +701,15 @@ namespace RCS.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to My Annoucements.
+        /// </summary>
+        public static string MyAnnoucements {
+            get {
+                return ResourceManager.GetString("MyAnnoucements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to My Profile.
         /// </summary>
         public static string MyProfile {
@@ -539,11 +719,29 @@ namespace RCS.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New password.
+        /// </summary>
+        public static string Newpassword {
+            get {
+                return ResourceManager.GetString("Newpassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to News / Events.
         /// </summary>
         public static string NewsEvents {
             get {
                 return ResourceManager.GetString("NewsEvents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Advertises Found !!.
+        /// </summary>
+        public static string noAdvertise {
+            get {
+                return ResourceManager.GetString("noAdvertise", resourceCulture);
             }
         }
         
@@ -566,11 +764,38 @@ namespace RCS.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Owner Info.
+        /// </summary>
+        public static string OwnerInfo {
+            get {
+                return ResourceManager.GetString("OwnerInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string OwnerName {
+            get {
+                return ResourceManager.GetString("OwnerName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Phone.
         /// </summary>
         public static string OwnerPhone {
             get {
                 return ResourceManager.GetString("OwnerPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password : .
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
             }
         }
         
@@ -584,11 +809,65 @@ namespace RCS.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Personal Information.
+        /// </summary>
+        public static string PersonalInformation {
+            get {
+                return ResourceManager.GetString("PersonalInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone :.
+        /// </summary>
+        public static string Phone {
+            get {
+                return ResourceManager.GetString("Phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Price.
         /// </summary>
         public static string Price {
             get {
                 return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Address.
+        /// </summary>
+        public static string ProductAddress {
+            get {
+                return ResourceManager.GetString("ProductAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Info.
+        /// </summary>
+        public static string ProductInfo {
+            get {
+                return ResourceManager.GetString("ProductInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Name.
+        /// </summary>
+        public static string ProductName {
+            get {
+                return ResourceManager.GetString("ProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Price.
+        /// </summary>
+        public static string ProductPrice {
+            get {
+                return ResourceManager.GetString("ProductPrice", resourceCulture);
             }
         }
         
@@ -616,6 +895,15 @@ namespace RCS.Resources {
         public static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remember me ? .
+        /// </summary>
+        public static string Rememberme {
+            get {
+                return ResourceManager.GetString("Rememberme", resourceCulture);
             }
         }
         
@@ -710,11 +998,47 @@ namespace RCS.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to text-left.
         /// </summary>
         public static string text {
             get {
                 return ResourceManager.GetString("text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Request.
+        /// </summary>
+        public static string UpdateRequest {
+            get {
+                return ResourceManager.GetString("UpdateRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upload Images.
+        /// </summary>
+        public static string UploadImages {
+            get {
+                return ResourceManager.GetString("UploadImages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UserName :.
+        /// </summary>
+        public static string UserName {
+            get {
+                return ResourceManager.GetString("UserName", resourceCulture);
             }
         }
         

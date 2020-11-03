@@ -132,6 +132,9 @@
   <data name="address" xml:space="preserve">
     <value>Address: 22 Manchiet el tairan st.khalifa el maamoun . heliopolis</value>
   </data>
+  <data name="addressText" xml:space="preserve">
+    <value>Address :</value>
+  </data>
   <data name="Advertises" xml:space="preserve">
     <value>Advertises</value>
   </data>
@@ -159,11 +162,23 @@
   <data name="Category" xml:space="preserve">
     <value>Category</value>
   </data>
+  <data name="CategoryName" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change Password </value>
+  </data>
   <data name="Chiefs" xml:space="preserve">
     <value>Chiefs</value>
   </data>
   <data name="Cleaners" xml:space="preserve">
     <value>Cleaners</value>
+  </data>
+  <data name="Confirmnewpassword" xml:space="preserve">
+    <value>Confirm new password</value>
+  </data>
+  <data name="Confirmpassword" xml:space="preserve">
+    <value>Confirm password</value>
   </data>
   <data name="ContactUs" xml:space="preserve">
     <value>Contact Us</value>
@@ -184,6 +199,9 @@
   <data name="creativity" xml:space="preserve">
     <value>Creativity</value>
   </data>
+  <data name="Currentpassword" xml:space="preserve">
+    <value>Current password</value>
+  </data>
   <data name="DateAdded" xml:space="preserve">
     <value>Date Added</value>
   </data>
@@ -194,6 +212,9 @@
     <value>Delivery</value>
   </data>
   <data name="Department" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
     <value>Department</value>
   </data>
   <data name="Description" xml:space="preserve">
@@ -217,14 +238,44 @@
   <data name="email" xml:space="preserve">
     <value>Email: artmedia2017.eg@gmail.com</value>
   </data>
+  <data name="EmailText" xml:space="preserve">
+    <value>Email :</value>
+  </data>
   <data name="Equipment" xml:space="preserve">
     <value>Equipment</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>This Field Required .</value>
+  </data>
+  <data name="errorAddress" xml:space="preserve">
+    <value>Please Enter Address</value>
+  </data>
+  <data name="errorConPass" xml:space="preserve">
+    <value>Please Enter Confrim Password</value>
+  </data>
+  <data name="errorEmail" xml:space="preserve">
+    <value>Please Enter Email</value>
+  </data>
+  <data name="errorGender" xml:space="preserve">
+    <value>Please Enter Gender</value>
+  </data>
+  <data name="errorPass" xml:space="preserve">
+    <value>Please Enter Password</value>
+  </data>
+  <data name="errorPhon" xml:space="preserve">
+    <value>Please Enter Phone Number</value>
+  </data>
+  <data name="errorUserName" xml:space="preserve">
+    <value>Please Enter UserName</value>
   </data>
   <data name="ExteriorDesign" xml:space="preserve">
     <value>Exterior Design</value>
   </data>
   <data name="FranchiseGuide" xml:space="preserve">
     <value>Franchise Guide</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender :</value>
   </data>
   <data name="Global" xml:space="preserve">
     <value>Global</value>
@@ -234,6 +285,9 @@
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="imagesInq" xml:space="preserve">
+    <value>* Select All Images For This Item .</value>
   </data>
   <data name="individ" xml:space="preserve">
     <value>Individuation</value>
@@ -262,6 +316,9 @@
   <data name="MakeAnAdvertise" xml:space="preserve">
     <value>Make An Advertise</value>
   </data>
+  <data name="MakeRequest" xml:space="preserve">
+    <value>Make Request</value>
+  </data>
   <data name="Managers" xml:space="preserve">
     <value>Managers</value>
   </data>
@@ -274,11 +331,20 @@
   <data name="MyAdvertises" xml:space="preserve">
     <value>My Advertises</value>
   </data>
+  <data name="MyAnnoucements" xml:space="preserve">
+    <value>My Annoucements</value>
+  </data>
   <data name="MyProfile" xml:space="preserve">
     <value>My Profile</value>
   </data>
+  <data name="Newpassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
   <data name="NewsEvents" xml:space="preserve">
     <value>News / Events</value>
+  </data>
+  <data name="noAdvertise" xml:space="preserve">
+    <value>No Advertises Found !!</value>
   </data>
   <data name="note" xml:space="preserve">
     <value>Advertise Deleted !!</value>
@@ -286,14 +352,41 @@
   <data name="OwnerEmail" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="OwnerInfo" xml:space="preserve">
+    <value>Owner Info</value>
+  </data>
+  <data name="OwnerName" xml:space="preserve">
+    <value>Name</value>
+  </data>
   <data name="OwnerPhone" xml:space="preserve">
     <value>Phone</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password : </value>
   </data>
   <data name="Pending" xml:space="preserve">
     <value>Pending....</value>
   </data>
+  <data name="PersonalInformation" xml:space="preserve">
+    <value>Personal Information</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone :</value>
+  </data>
   <data name="Price" xml:space="preserve">
     <value>Price</value>
+  </data>
+  <data name="ProductAddress" xml:space="preserve">
+    <value>Product Address</value>
+  </data>
+  <data name="ProductInfo" xml:space="preserve">
+    <value>Product Info</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>Product Name</value>
+  </data>
+  <data name="ProductPrice" xml:space="preserve">
+    <value>Product Price</value>
   </data>
   <data name="prompt" xml:space="preserve">
     <value>Are you sure you want delete this advertise ?</value>
@@ -303,6 +396,9 @@
   </data>
   <data name="Register" xml:space="preserve">
     <value>Register</value>
+  </data>
+  <data name="Rememberme" xml:space="preserve">
+    <value>Remember me ? </value>
   </data>
   <data name="Renew" xml:space="preserve">
     <value>Renew</value>
@@ -334,8 +430,20 @@
   <data name="Stewarts" xml:space="preserve">
     <value>Stewarts</value>
   </data>
+  <data name="String" xml:space="preserve">
+    <value />
+  </data>
   <data name="text" xml:space="preserve">
     <value>text-left</value>
+  </data>
+  <data name="UpdateRequest" xml:space="preserve">
+    <value>Update Request</value>
+  </data>
+  <data name="UploadImages" xml:space="preserve">
+    <value>Upload Images</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>UserName :</value>
   </data>
   <data name="whCon" xml:space="preserve">
     <value>We help you in promoting the restaurant or café locally and internationally, So here you will be in the hands of all those you are looking for, whether potential clients, project owners or job seekers.</value>

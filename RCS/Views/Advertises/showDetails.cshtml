@@ -28,11 +28,38 @@
                 <div class="swiper-button-next"></div>
             </div>
             <div class="ItemDetail col-md-6 col-sm-11 mx-auto border p-4 wow pulse">
-                <h4>@Model.productname</h4>
-                <p>@Model.price @RCS.Resources.Resource.EGP</p>
-                <p>@Model.address</p>
-                <span class="badge badge-primary p-2">@Model.depName</span>
-                <span class="badge badge-info p-2">@Model.catName</span>
+                <h4 class="@RCS.Resources.Resource.text">@Model.productname</h4>
+                <p class="@RCS.Resources.Resource.text">@Model.price @RCS.Resources.Resource.EGP</p>
+                <p class="@RCS.Resources.Resource.text">@Model.address</p>
+                @{ 
+                    var dep = " ";
+                    var cat = " ";
+                    if (Model.depName == "Buy / Sell") { dep = RCS.Resources.Resource.BuySell; }
+                    else if (Model.depName == "Services") { dep = RCS.Resources.Resource.Services; }
+                    else if (Model.depName == "Jobs") { dep = RCS.Resources.Resource.Jobs; }
+                    else if (Model.depName == "News / Events") { dep = RCS.Resources.Resource.NewsEvents; }
+
+
+                    if (Model.catName == "Equipment") { cat = RCS.Resources.Resource.Equipment; }
+                    else if (Model.catName == "Basis") { cat = RCS.Resources.Resource.Basis; }
+                    else if (Model.catName == "Devices") { cat = RCS.Resources.Resource.Devices; }
+                    else if (Model.catName == "Shops") { cat = RCS.Resources.Resource.Shops; }
+                    else if (Model.catName == "Interior Design") { cat = RCS.Resources.Resource.InteriorDesign; }
+                    else if (Model.catName == "Exterior Design") { cat = RCS.Resources.Resource.ExteriorDesign; }
+                    else if (Model.catName == "Design and Print Menues") { cat = RCS.Resources.Resource.DesignandPrintMenus; }
+                    else if (Model.catName == "Franchise Guide") { cat = RCS.Resources.Resource.FranchiseGuide; }
+                    else if (Model.catName == "Create Brandings") { cat = RCS.Resources.Resource.CreateBrandings; }
+                    else if (Model.catName == "Stewarts") { cat = RCS.Resources.Resource.Stewarts; }
+                    else if (Model.catName == "Chiefs") { cat = RCS.Resources.Resource.Chiefs; }
+                    else if (Model.catName == "Delivery") { cat = RCS.Resources.Resource.Delivery; }
+                    else if (Model.catName == "Cleaners") { cat = RCS.Resources.Resource.Cleaners; }
+                    else if (Model.catName == "Accountants") { cat = RCS.Resources.Resource.Accountants; }
+                    else if (Model.catName == "Managers") { cat = RCS.Resources.Resource.Managers; }
+                    else if (Model.catName == "Local") { cat = RCS.Resources.Resource.Local; }
+                    else if (Model.catName == "Global") { cat = RCS.Resources.Resource.Global; }
+                }
+            <span class="badge badge-primary p-2 @RCS.Resources.Resource.text">@dep</span>
+                <span class="badge badge-info p-2 @RCS.Resources.Resource.text">@cat</span>
             </div>
         </div>
     </div>

@@ -132,6 +132,9 @@
   <data name="address" xml:space="preserve">
     <value>العنوان : 22 ش منشية الطيران - الخليفة المامون - م الجديدة </value>
   </data>
+  <data name="addressText" xml:space="preserve">
+    <value>العنوان :</value>
+  </data>
   <data name="Advertises" xml:space="preserve">
     <value>الاعلانات</value>
   </data>
@@ -159,11 +162,23 @@
   <data name="Category" xml:space="preserve">
     <value>فئة</value>
   </data>
+  <data name="CategoryName" xml:space="preserve">
+    <value>الفئة</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>تغير كلمة المرور </value>
+  </data>
   <data name="Chiefs" xml:space="preserve">
     <value>شيفات</value>
   </data>
   <data name="Cleaners" xml:space="preserve">
     <value>عمال نظافة</value>
+  </data>
+  <data name="Confirmnewpassword" xml:space="preserve">
+    <value>تأكيد كلمه المرو الجديدة</value>
+  </data>
+  <data name="Confirmpassword" xml:space="preserve">
+    <value>تأكيد كلمة المرور :</value>
   </data>
   <data name="ContactUs" xml:space="preserve">
     <value>تواصل معنا</value>
@@ -184,6 +199,9 @@
   <data name="creativity" xml:space="preserve">
     <value>الابداع</value>
   </data>
+  <data name="Currentpassword" xml:space="preserve">
+    <value>كلمه المرور الحالية </value>
+  </data>
   <data name="DateAdded" xml:space="preserve">
     <value>تاريخ الاضاقة</value>
   </data>
@@ -195,6 +213,9 @@
   </data>
   <data name="Department" xml:space="preserve">
     <value>قسم </value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>القسم</value>
   </data>
   <data name="Description" xml:space="preserve">
     <value>الوصف</value>
@@ -217,14 +238,44 @@
   <data name="email" xml:space="preserve">
     <value> artmedia2017.eg@gmail.com :البريد الالكتروني</value>
   </data>
+  <data name="EmailText" xml:space="preserve">
+    <value>البريد الالكتروني :</value>
+  </data>
   <data name="Equipment" xml:space="preserve">
     <value>معدات</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>ادخل هذا الحقل.</value>
+  </data>
+  <data name="errorAddress" xml:space="preserve">
+    <value>ادخل العنوان</value>
+  </data>
+  <data name="errorConPass" xml:space="preserve">
+    <value>تأكيد كلمه المرور</value>
+  </data>
+  <data name="errorEmail" xml:space="preserve">
+    <value>ادخل البريد الالكتروني</value>
+  </data>
+  <data name="errorGender" xml:space="preserve">
+    <value>اختر النوع</value>
+  </data>
+  <data name="errorPass" xml:space="preserve">
+    <value>ادخل كلمه المرور</value>
+  </data>
+  <data name="errorPhon" xml:space="preserve">
+    <value>ادخل رقم الهاتف</value>
+  </data>
+  <data name="errorUserName" xml:space="preserve">
+    <value>ادخل الاسم </value>
   </data>
   <data name="ExteriorDesign" xml:space="preserve">
     <value>تصميم خارجي</value>
   </data>
   <data name="FranchiseGuide" xml:space="preserve">
     <value>مرشد فرنشايز</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>النوع :</value>
   </data>
   <data name="Global" xml:space="preserve">
     <value>عالمي</value>
@@ -234,6 +285,9 @@
   </data>
   <data name="Home" xml:space="preserve">
     <value>الرئيسية</value>
+  </data>
+  <data name="imagesInq" xml:space="preserve">
+    <value>* قم بتحديد كل الصور .</value>
   </data>
   <data name="individ" xml:space="preserve">
     <value>التميز</value>
@@ -262,6 +316,9 @@
   <data name="MakeAnAdvertise" xml:space="preserve">
     <value> انشأ أعلانك </value>
   </data>
+  <data name="MakeRequest" xml:space="preserve">
+    <value>عمل طلب</value>
+  </data>
   <data name="Managers" xml:space="preserve">
     <value>مديرين</value>
   </data>
@@ -274,11 +331,20 @@
   <data name="MyAdvertises" xml:space="preserve">
     <value>اعلاناتي</value>
   </data>
+  <data name="MyAnnoucements" xml:space="preserve">
+    <value>الاشعارات</value>
+  </data>
   <data name="MyProfile" xml:space="preserve">
     <value>الصفحة الشخصية</value>
   </data>
+  <data name="Newpassword" xml:space="preserve">
+    <value>كلمه المرور الجديدة</value>
+  </data>
   <data name="NewsEvents" xml:space="preserve">
     <value>الاحداث و الاخبار</value>
+  </data>
+  <data name="noAdvertise" xml:space="preserve">
+    <value>لا توجد اعلانات !!!</value>
   </data>
   <data name="note" xml:space="preserve">
     <value>تم حذف الاعلان !!!!</value>
@@ -286,14 +352,41 @@
   <data name="OwnerEmail" xml:space="preserve">
     <value>البريد الالكتروني</value>
   </data>
+  <data name="OwnerInfo" xml:space="preserve">
+    <value>معلومات المالك</value>
+  </data>
+  <data name="OwnerName" xml:space="preserve">
+    <value>الاسم </value>
+  </data>
   <data name="OwnerPhone" xml:space="preserve">
     <value>رقم الهاتف</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>كلمه المرور :</value>
   </data>
   <data name="Pending" xml:space="preserve">
     <value>معلق......</value>
   </data>
+  <data name="PersonalInformation" xml:space="preserve">
+    <value>المعلومات الشخصية</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>رقم الهاتف :</value>
+  </data>
   <data name="Price" xml:space="preserve">
     <value>السعر</value>
+  </data>
+  <data name="ProductAddress" xml:space="preserve">
+    <value>عنوان المنتج</value>
+  </data>
+  <data name="ProductInfo" xml:space="preserve">
+    <value>معلومات المنتج</value>
+  </data>
+  <data name="ProductName" xml:space="preserve">
+    <value>اسم المنتج</value>
+  </data>
+  <data name="ProductPrice" xml:space="preserve">
+    <value>سعر المنتج</value>
   </data>
   <data name="prompt" xml:space="preserve">
     <value>هل انت متأكد من انك تريد حذف هذا الاعلان ؟</value>
@@ -303,6 +396,9 @@
   </data>
   <data name="Register" xml:space="preserve">
     <value>انشاء حساب</value>
+  </data>
+  <data name="Rememberme" xml:space="preserve">
+    <value>تذكرنى ؟</value>
   </data>
   <data name="Renew" xml:space="preserve">
     <value>تجديد</value>
@@ -336,6 +432,15 @@
   </data>
   <data name="text" xml:space="preserve">
     <value>text-right</value>
+  </data>
+  <data name="UpdateRequest" xml:space="preserve">
+    <value>تعديل الطلب</value>
+  </data>
+  <data name="UploadImages" xml:space="preserve">
+    <value>تحميل الصور</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>الاسم :</value>
   </data>
   <data name="whCon" xml:space="preserve">
     <value>نحن نساعدك في الترويج للمطعم أو المقهى محليًا وعالميًا ، لذلك ستكون هنا في أيدي كل من تبحث عنه ، سواء عملاء محتملين أو أصحاب مشاريع أو باحثين عن عمل.</value>

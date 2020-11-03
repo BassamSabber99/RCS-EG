@@ -7,6 +7,8 @@ using System.Web.Http;
 using RCS.Models;
 using System.Data.Entity;
 using System.IO;
+using Microsoft.Ajax.Utilities;
+
 namespace RCS.Controllers.api
 {
     public class ProductController : ApiController
@@ -30,8 +32,27 @@ namespace RCS.Controllers.api
         {
             return Ok(_context.Products.Include(c => c.Category).Where(x => x.status == false).ToList());
         }
-       
-        
+
+    
+        public IHttpActionResult getProdByname(string name)
+        {
+            var pro = from i in _context.images.ToList()
+                      join p in _context.Products.ToList() on
+                      i.productId equals p.id
+                      where p.name.Contains(name)
+                      select new
+                      {
+                          id = p.id,
+                          nam = p.name,
+                          price = p.price,
+                          dep = p.Category.Department.depName,
+                          cat = p.Category.catName,
+                          image = i.ImagePath,
+                      };
+            return Ok(pro.ToList().DistinctBy(i => i.id));
+        }
+
+
 
         [HttpDelete]
         public IHttpActionResult DeleteProduct(int id)

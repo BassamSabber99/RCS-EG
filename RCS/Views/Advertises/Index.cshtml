@@ -9,9 +9,9 @@
     <h2 class="wow bounceIn pb-1 border-bottom font-weight-bold @RCS.Resources.Resource.text">@RCS.Resources.Resource.AllAdvertises</h2>
     @if (Request.IsAuthenticated && !User.IsInRole("Admin"))
     {
-<div class="row justify-content-center">
-    <a href="~/Advertises/makeAdvertise" class="btn btn-primary wow tada">@RCS.Resources.Resource.MakeAdvertise</a>
-</div>}
+        <div class="row justify-content-center">
+            <a href="~/Advertises/makeAdvertise" class="btn btn-primary wow tada">@RCS.Resources.Resource.MakeAdvertise</a>
+        </div>}
     <div class="row" align="center">
         <form class="ml-4 col-md-12">
             <div class="form-group row col-md-12">
@@ -62,7 +62,7 @@
         </div>
         <div class="dropdown">
             <button class="dep btn btn-outline-danger dropdown-toggle mr-1 mt-1" data-dep=" News / Events" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               @RCS.Resources.Resource.NewsEvents
+                @RCS.Resources.Resource.NewsEvents
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item cat @RCS.Resources.Resource.text" data-CateName="Local">@RCS.Resources.Resource.Local</a>
@@ -76,7 +76,7 @@
     <div class="row item justify-content-center ">
         @if (!Model.Any())
         {
-            <h3 style="height:500px">No Advertises Found !!</h3> 
+            <h3 style="height:500px">@RCS.Resources.Resource.noAdvertise</h3>
         }
         else
         {
@@ -93,7 +93,7 @@
                 if (product.catName == "Equipment") { cat = RCS.Resources.Resource.Equipment; }
                 else if (product.catName == "Basis") { cat = RCS.Resources.Resource.Basis; }
                 else if (product.catName == "Devices") { cat = RCS.Resources.Resource.Devices; }
-                else if (product.catName == "Shops"){ cat = RCS.Resources.Resource.Shops;}
+                else if (product.catName == "Shops") { cat = RCS.Resources.Resource.Shops; }
                 else if (product.catName == "Interior Design") { cat = RCS.Resources.Resource.InteriorDesign; }
                 else if (product.catName == "Exterior Design") { cat = RCS.Resources.Resource.ExteriorDesign; }
                 else if (product.catName == "Design and Print Menues") { cat = RCS.Resources.Resource.DesignandPrintMenus; }
@@ -116,14 +116,15 @@
                     <span class="badge badge-primary p-1 " style="margin-top:8px">@dep</span>
                     <span class="badge badge-info p-1 ">@cat</span>
                     <a href="/Advertises/showDetails?id=@product.id" class="btn btn-danger float-right" role="button">@RCS.Resources.Resource.ShowDetails</a>
-                </div>                
+                </div>
             }
         }
     </div>
 </div>
 
-@Html.PagedListPager(Model,page=>Url.Action("index",new { page }),new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded , DisplayPageCountAndCurrentLocation = true })
+<h1></h1>
 
+@Html.PagedListPager(Model, page => Url.Action("index", new { page }), new PagedListRenderOptions() { Display = PagedListDisplayMode.IfNeeded, DisplayPageCountAndCurrentLocation = true })
 
 @section scripts{
     <script>
@@ -148,7 +149,7 @@
 
                         $(".products .item").empty();
                         if (data.length == 0) {
-                            $(".products .item").append(`<h3 style="height: 500px">No Advertises Found !!</h3>`);
+                            $(".products .item").append(`<h3 style="height: 500px">@RCS.Resources.Resource.noAdvertise</h3>`);
                         }
                         for (let i = 0; i < data.length; i++) {
                             var imageName = data[i].image.split("\\");
@@ -170,6 +171,45 @@
             $(".pagination-container").addClass(" d-flex justify-content-center");
             $(".pagination li").addClass(" page-item");
             $(".pagination li a").addClass(" page-link");
+
+            $("#Search").on("keyup", function () {
+                var val = $(this).val();
+                if (val != "") {
+                    $.ajax({
+                        url: `/api/Product?name=${val}`,
+                        method: "GET",
+                        beforeSend: function () {
+                            $(".products .item").empty();
+                        },
+                        success: function (data) {
+                            $(".pagination-container").removeClass(" d-flex");
+                            $(".pagination-container").addClass(" d-none");
+
+                            $(".products .item").empty();
+                            if (data.length == 0) {
+                                $(".products .item").append(`<h3 style="height: 500px">@RCS.Resources.Resource.noAdvertise</h3>`);
+                            }
+                            console.log(data);
+                            for (let i = 0; i < data.length; i++) {
+                                var imageName = data[i].image.split("\\");
+                                var elem = `
+                                    <div class="p-2  " style="height:400px" data-CateName="${data[i].cat}">
+                                        <img src="../uploadedFiles/${imageName[imageName.length - 1]}">
+                                        <h6 class="p-1 mt-2"> ${data[i].nam} <span class="font-weight-bold float-right" style="font-size: 12px; line-height: 25px;">${data[i].price} EGP</span></h6>
+                                        <span class="badge badge-primary p-1 " style="margin-top:8px">${data[i].dep}</span>
+                                        <span class="badge badge-info p-1 ">${data[i].cat}</span>
+                                        <a href="/Advertises/showDetails?id=${data[i].id}" class="btn btn-danger float-right" role="button">@RCS.Resources.Resource.ShowDetails</a>
+                                    </div>`;
+
+                                $(".products .item").append(elem);
+                            }
+                        }
+                    })
+                }
+                else {
+                    window.location.reload();
+                }
+            });
 
         });
     </script>

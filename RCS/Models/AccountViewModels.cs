@@ -48,56 +48,57 @@ namespace RCS.Models
 
     public class LoginViewModel
     {
-        [Required]
-        [Display(Name = "Email")]
+        [Required(ErrorMessageResourceName = "errorEmail", ErrorMessageResourceType = typeof(Resources.Resource))]
+        [Display(Name = "EmailText", ResourceType = typeof(Resources.Resource))]
         [EmailAddress]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceName = "errorPass", ErrorMessageResourceType = typeof(Resources.Resource))]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Password", ResourceType = typeof(Resources.Resource))]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "Rememberme" , ResourceType = typeof(Resources.Resource))]
         public bool RememberMe { get; set; }
     }
 
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessageResourceName = "errorUserName", ErrorMessageResourceType = typeof(Resources.Resource))]
         [DataType(DataType.Text)]
-        [Display(Name = "UserName")]
+        [Display(Name = "UserName" , ResourceType = typeof(Resources.Resource))]
         public string UserName { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceName = "errorPhon", ErrorMessageResourceType = typeof(Resources.Resource))]
         [DataType(DataType.PhoneNumber)]
-        [Display(Name = "Phone Number")]
+        [Display(Name = "Phone", ResourceType = typeof(Resources.Resource))]
         public string Phone { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceName = "errorAddress", ErrorMessageResourceType = typeof(Resources.Resource))]
         [DataType(DataType.Text)]
-        [Display(Name = "Address")]
+        [Display(Name = "addressText", ResourceType = typeof(Resources.Resource))]
         public string address { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceName = "errorEmail", ErrorMessageResourceType = typeof(Resources.Resource))]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "EmailText", ResourceType = typeof(Resources.Resource))]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceName = "errorGender", ErrorMessageResourceType = typeof(Resources.Resource))]
         [DataType(DataType.Text)]
-        [Display(Name = "Gender")]
+        [Display(Name = "Gender", ResourceType = typeof(Resources.Resource))]
         public string Gender { get; set; }
 
-        [Required]
+        [Required(ErrorMessageResourceName = "errorPass", ErrorMessageResourceType = typeof(Resources.Resource))]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Password", ResourceType = typeof(Resources.Resource))]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
+        [Display(Name = "Confirmpassword", ResourceType = typeof(Resources.Resource))]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Required(ErrorMessageResourceName = "errorConPass", ErrorMessageResourceType = typeof(Resources.Resource))]
         public string ConfirmPassword { get; set; }
     }
 
