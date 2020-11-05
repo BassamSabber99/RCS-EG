@@ -145,7 +145,6 @@ namespace RCS.Controllers
                 image.ImagePath = pvm.ImagePath;
                 image.productId = product.id;
                 _context.images.Add(image);
-
             }
         }
             

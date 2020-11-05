@@ -2,8 +2,10 @@
 @model IPagedList<RCS.viewModels.allProduct>
 @using PagedList;
 @using PagedList.Mvc;
-@{ ViewBag.Title = "Advertises";
-    Layout = "~/Views/Shared/_Layout.cshtml"; }
+@{
+    ViewBag.Title = RCS.Resources.Resource.Advertises;
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+}
 
 <div class="category container">
     <h2 class="wow bounceIn pb-1 border-bottom font-weight-bold @RCS.Resources.Resource.text">@RCS.Resources.Resource.AllAdvertises</h2>
@@ -23,14 +25,14 @@
         </form>
     </div>
     <div id="filter" class="row justify-content-center p-2 wow fadeIn" align="center">
-        <a href="index" id="all" class="dep btn btn-outline-danger mr-1 mt-1 active" data-dep="All">@RCS.Resources.Resource.All</a>
+        <a href="/Advertises/index" id="all" class="dep btn btn-outline-danger mr-1 mt-1 active" data-dep="All">@RCS.Resources.Resource.All</a>
         <div class="dropdown">
             <button class="dep btn btn-outline-danger dropdown-toggle mr-1 mt-1" data-dep="Buy / Sell" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 @RCS.Resources.Resource.BuySell
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item cat @RCS.Resources.Resource.text" data-CateName="Equipment">@RCS.Resources.Resource.Equipment</a>
-                <a class="dropdown-item cat @RCS.Resources.Resource.text" data-CateName="Basis">@RCS.Resources.Resource.Basis</a>
+                <a class="dropdown-item cat @RCS.Resources.Resource.text" data-CateName="Basics">@RCS.Resources.Resource.Basis</a>
                 <a class="dropdown-item cat @RCS.Resources.Resource.text" data-CateName="Devices">@RCS.Resources.Resource.Devices</a>
                 <a class="dropdown-item cat @RCS.Resources.Resource.text" data-CateName="Shops">@RCS.Resources.Resource.Shops</a>
             </div>
@@ -91,7 +93,7 @@
 
 
                 if (product.catName == "Equipment") { cat = RCS.Resources.Resource.Equipment; }
-                else if (product.catName == "Basis") { cat = RCS.Resources.Resource.Basis; }
+                else if (product.catName == "Basics") { cat = RCS.Resources.Resource.Basis; }
                 else if (product.catName == "Devices") { cat = RCS.Resources.Resource.Devices; }
                 else if (product.catName == "Shops") { cat = RCS.Resources.Resource.Shops; }
                 else if (product.catName == "Interior Design") { cat = RCS.Resources.Resource.InteriorDesign; }

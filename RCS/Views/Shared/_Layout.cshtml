@@ -9,13 +9,13 @@
      , resturant machines , coffe shop machines , jobs , staff , chefs, services, interior design , exterior design , devices ">
     <meta name="author" content="Ahmed Saber">
     <meta name="copyright" content="Art Media All rights reserved">
-    <title>@ViewBag.Title | Resturant and Cafe Service</title>
+    <title>@ViewBag.Title | @RCS.Resources.Resource.TitleQoute </title>
     <link rel="icon" href="~/images/icon.png">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @if (HttpContext.Current.Request.Cookies.Count > 0)
+    @if (HttpContext.Current.Request.Cookies["Language"] != null)
     {
-        if (HttpContext.Current.Request.Cookies["Language"].Value == "ar")
+        if (HttpContext.Current.Request.Cookies["Language"].Value == "ar" )
         {
             <link rel="stylesheet" href="~/Content/styleAr.css" />
         }

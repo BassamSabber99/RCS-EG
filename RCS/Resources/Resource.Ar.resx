@@ -150,6 +150,9 @@
   <data name="Annoucements" xml:space="preserve">
     <value>الاشعارات</value>
   </data>
+  <data name="Announcements" xml:space="preserve">
+    <value>الاشعارات</value>
+  </data>
   <data name="Basis" xml:space="preserve">
     <value>اساس</value>
   </data>
@@ -310,6 +313,9 @@
   <data name="Logoff" xml:space="preserve">
     <value>تسجيل الخروج</value>
   </data>
+  <data name="Make Request" xml:space="preserve">
+    <value>انشاء طلب</value>
+  </data>
   <data name="MakeAdvertise" xml:space="preserve">
     <value>انشاء اعلان + </value>
   </data>
@@ -432,6 +438,9 @@
   </data>
   <data name="text" xml:space="preserve">
     <value>text-right</value>
+  </data>
+  <data name="TitleQoute" xml:space="preserve">
+    <value>خدمات المطاعم و الكافيهات</value>
   </data>
   <data name="UpdateRequest" xml:space="preserve">
     <value>تعديل الطلب</value>

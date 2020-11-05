@@ -1,7 +1,7 @@
 ﻿@using RCS.Models
 @model LoginViewModel
 @{
-    ViewBag.Title = "Log in";
+    ViewBag.Title = RCS.Resources.Resource.Login;
 }
 <div class="login-container wow pulse">
     <div class="container col-md-5 p-5 login @RCS.Resources.Resource.text">
@@ -14,16 +14,16 @@
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <h1 class="text-center mb-5 text-white">@RCS.Resources.Resource.Login</h1>
             <div class="form-group row">
-                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label text-white" })
-                <div class="col-md-10">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-3 control-label text-white" })
+                <div class="col-md-9">
                     @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
                     @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             <div class="form-group row">
-                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label text-white" })
-                <div class="col-md-10">
+                @Html.LabelFor(m => m.Password, new { @class = "col-md-3 control-label text-white" })
+                <div class="col-md-9">
                     @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
                     @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                 </div>

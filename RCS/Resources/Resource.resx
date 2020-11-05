@@ -150,8 +150,11 @@
   <data name="Annoucements" xml:space="preserve">
     <value>Annoucements</value>
   </data>
+  <data name="Announcements" xml:space="preserve">
+    <value>Announcements</value>
+  </data>
   <data name="Basis" xml:space="preserve">
-    <value>Basis</value>
+    <value>Basics</value>
   </data>
   <data name="BuySell" xml:space="preserve">
     <value>Buy / Sell</value>
@@ -310,6 +313,9 @@
   <data name="Logoff" xml:space="preserve">
     <value>Log off</value>
   </data>
+  <data name="Make Request" xml:space="preserve">
+    <value>Make Request</value>
+  </data>
   <data name="MakeAdvertise" xml:space="preserve">
     <value>+ Make Advertise</value>
   </data>
@@ -435,6 +441,9 @@
   </data>
   <data name="text" xml:space="preserve">
     <value>text-left</value>
+  </data>
+  <data name="TitleQoute" xml:space="preserve">
+    <value>Resturant and Cafe Service</value>
   </data>
   <data name="UpdateRequest" xml:space="preserve">
     <value>Update Request</value>

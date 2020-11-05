@@ -160,7 +160,16 @@ namespace RCS.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Basis.
+        ///   Looks up a localized string similar to Announcements.
+        /// </summary>
+        public static string Announcements {
+            get {
+                return ResourceManager.GetString("Announcements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Basics.
         /// </summary>
         public static string Basis {
             get {
@@ -638,6 +647,15 @@ namespace RCS.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Make Request.
+        /// </summary>
+        public static string Make_Request {
+            get {
+                return ResourceManager.GetString("Make Request", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to + Make Advertise.
         /// </summary>
         public static string MakeAdvertise {
@@ -1012,6 +1030,15 @@ namespace RCS.Resources {
         public static string text {
             get {
                 return ResourceManager.GetString("text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resturant and Cafe Service.
+        /// </summary>
+        public static string TitleQoute {
+            get {
+                return ResourceManager.GetString("TitleQoute", resourceCulture);
             }
         }
         

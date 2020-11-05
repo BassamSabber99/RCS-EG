@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNet.Identity;
 @model RCS.viewModels.detailsViewModel
 @{
-    ViewBag.Title = "Show Details";
+    ViewBag.Title = RCS.Resources.Resource.ShowDetails;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -41,7 +41,7 @@
 
 
                     if (Model.catName == "Equipment") { cat = RCS.Resources.Resource.Equipment; }
-                    else if (Model.catName == "Basis") { cat = RCS.Resources.Resource.Basis; }
+                    else if (Model.catName == "Basics") { cat = RCS.Resources.Resource.Basis; }
                     else if (Model.catName == "Devices") { cat = RCS.Resources.Resource.Devices; }
                     else if (Model.catName == "Shops") { cat = RCS.Resources.Resource.Shops; }
                     else if (Model.catName == "Interior Design") { cat = RCS.Resources.Resource.InteriorDesign; }
