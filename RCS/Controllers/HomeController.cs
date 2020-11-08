@@ -10,7 +10,6 @@ using System.Threading;
 using System.Globalization;
 using RCS.Filters;
 
-
 namespace RCS.Controllers
 {
     public class HomeController : Controller

@@ -278,7 +278,6 @@ nav .navbar-brand p {
     z-index: 5;
     padding: 5px 0 5px 0;
     overflow: hidden;
-    display: none;
 }
 
 .socialIcon a {
@@ -304,31 +303,6 @@ nav .navbar-brand p {
     font-size: 20px;
     margin-left: 10px;
     float: right;
-}
-
-.anchor {
-    position: fixed;
-    z-index: 500;
-    bottom: 10%;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.anchor i {
-    color: crimson;
-    font-size: 35px;
-    cursor: pointer;
-    transition: all 0.5s;
-    margin-bottom: 10px;
-}
-
-.anchor i:hover {
-    transform: scale(1.3);
 }
 
 

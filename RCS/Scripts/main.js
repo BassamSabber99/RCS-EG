@@ -21,15 +21,5 @@ $(document).ready(function() {
     $('.chat').on("click", function() {
         $('.inbox').slideToggle(500);
     })
-    $("#anc").on("click", function() {
-        $("#social").slideToggle();
-        if ($(this).html() === `<i class="far fa-arrow-alt-circle-left"></i>`) {
-            $(this).html(`<i class="far fa-arrow-alt-circle-right"></i>`);
-        } else {
-            $(this).html(`<i class="far fa-arrow-alt-circle-left"></i>`);
-        }
-
-    })
-
 
 })

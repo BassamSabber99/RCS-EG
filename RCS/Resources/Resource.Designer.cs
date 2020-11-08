@@ -611,6 +611,33 @@ namespace RCS.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You can offer to buy or sell the restaurant or the cafe.
+        /// </summary>
+        public static string l1 {
+            get {
+                return ResourceManager.GetString("l1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Purchase of all equipment and supplies for preparing the restaurant or the cafe.
+        /// </summary>
+        public static string l2 {
+            get {
+                return ResourceManager.GetString("l2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Searching for jobs related to managing restaurant or cafe projects.
+        /// </summary>
+        public static string l3 {
+            get {
+                return ResourceManager.GetString("l3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to LandLine: (+20) 26905208.
         /// </summary>
         public static string lnd {
@@ -805,6 +832,15 @@ namespace RCS.Resources {
         public static string OwnerPhone {
             get {
                 return ResourceManager.GetString("OwnerPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The first electronic RCS platform through which we provide all restaurant and café owners with all restaurant or cafe services.
+        /// </summary>
+        public static string parag {
+            get {
+                return ResourceManager.GetString("parag", resourceCulture);
             }
         }
         

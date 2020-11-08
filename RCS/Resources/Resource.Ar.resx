@@ -301,6 +301,15 @@
   <data name="Jobs" xml:space="preserve">
     <value>وظائف</value>
   </data>
+  <data name="l1" xml:space="preserve">
+    <value>يمكنك عرض بيع او شراء المطعم او الكافية</value>
+  </data>
+  <data name="l2" xml:space="preserve">
+    <value>شراء كافة المعدات والمستلزمات الخاصة بتجهيز المطعم او الكافية</value>
+  </data>
+  <data name="l3" xml:space="preserve">
+    <value>البحث عن الوظائف الخاصة بإدارة مشاريع المطعم او الكافية</value>
+  </data>
   <data name="lnd" xml:space="preserve">
     <value>التليفون الارضي : (+20) 26905208</value>
   </data>
@@ -366,6 +375,9 @@
   </data>
   <data name="OwnerPhone" xml:space="preserve">
     <value>رقم الهاتف</value>
+  </data>
+  <data name="parag" xml:space="preserve">
+    <value>اول منصة الكترونية RCS نقدم من خلالها لكل اصحاب المطاعم والكافيهات كافة الخدمات الخاصة بالمطعم او الكافية</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>كلمه المرور :</value>

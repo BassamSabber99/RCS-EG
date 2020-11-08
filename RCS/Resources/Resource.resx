@@ -301,6 +301,15 @@
   <data name="Jobs" xml:space="preserve">
     <value>Jobs</value>
   </data>
+  <data name="l1" xml:space="preserve">
+    <value>You can offer to buy or sell the restaurant or the cafe</value>
+  </data>
+  <data name="l2" xml:space="preserve">
+    <value>Purchase of all equipment and supplies for preparing the restaurant or the cafe</value>
+  </data>
+  <data name="l3" xml:space="preserve">
+    <value>Searching for jobs related to managing restaurant or cafe projects</value>
+  </data>
   <data name="lnd" xml:space="preserve">
     <value>LandLine: (+20) 26905208</value>
   </data>
@@ -366,6 +375,9 @@
   </data>
   <data name="OwnerPhone" xml:space="preserve">
     <value>Phone</value>
+  </data>
+  <data name="parag" xml:space="preserve">
+    <value>The first electronic RCS platform through which we provide all restaurant and café owners with all restaurant or cafe services</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password : </value>

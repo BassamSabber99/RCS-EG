@@ -1,10 +1,14 @@
 ﻿using RCS.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
+using System.Net;
 
 namespace RCS.Controllers
 {
@@ -51,7 +55,7 @@ namespace RCS.Controllers
         }
         public ActionResult Accepted(int id)
         {
-            var productinDB = _context.Products.Single(x => x.id == id);
+            var productinDB = _context.Products.Include(s=>s.owner).Single(x => x.id == id);
             productinDB.DateAdded = DateTime.Now;
             productinDB.status = true;
             var announce = new Announcement()
@@ -65,6 +69,36 @@ namespace RCS.Controllers
                 dateAdded = productinDB.DateAdded,
             };
             _context.Announcements.Add(announce);
+
+            /*
+            var senderEmail = new MailAddress("bassamsabber@gmail.com", "RCS | Resturant And Cafe Services");
+            var receiverEmail = new MailAddress(productinDB.owner.Email, productinDB.owner.UserName);//bassamsabber@yahoo.com
+            var password = "Ba2589764321";
+            var sub = "Deleted Advertise";
+            string body = string.Empty;
+            using (StreamReader sr = new StreamReader(HttpContext.Current.Server.MapPath("~/EmailTemplates/AnnouncementPage.html")))
+            {
+                body = sr.ReadToEnd();
+            }
+            body = body.Replace("{name}", productinDB.owner.UserName);
+            body = body.Replace("{content}", "I Would Be To Inform You That Your Advertise <b>{advname}</b> Expired And Deleted . With My Besy Wishes RCS");
+            body = body.Replace("{advname}", productinDB.name);
+            var smtp = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(senderEmail.Address, password)
+            };
+            using (var mess = new MailMessage(senderEmail, receiverEmail) { Subject = sub, Body = body })
+            {
+                mess.IsBodyHtml = true;
+                smtp.Send(mess);
+            }
+            */
+
             _context.SaveChanges();
             return View("index");
         }
